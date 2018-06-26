@@ -1,0 +1,77 @@
+a jesli powiem Ci ze to szczescie
+a jesli powiem Ci ze to cud
+zostaniesz ze mna juz na zawsze
+zostaniesz ze mna tu
+
+And if I say, you are special to me
+And if I say, you are brilliant to me
+I said everything, 
+and I do not have ace in my sleeve
+
+a jesli myslisz ze to klamstwo,
+a jesli myslisz ze to blef
+mozesz sprawdzic to jesli chcesz
+lecz nie zostawiaj mnie
+
+
+
+1. Hi, i have problem with controller, i get error:                                        
+   ActionController :: ParameterMissing in ArtykulsController # create
+   missing parameter or value is empty: articles
+
+2. My code looks like this: 
+
+
+class ArtykulsController < ApplicationController
+  
+def index
+        
+ @artykuly = Article
+  
+end
+
+ def new
+
+Artykul.new @ articles = ({: name => "Title?"})
+
+@page = Page.order ('ASC Position')
+
+counter = article.count + 1
+  
+end
+  
+def create
+     
+@artykuly = Article.new (articles_parameters)
+  
+if @ artykuly.save
+       
+flash [: notice] = "article has been created"
+       
+redirect_to (: action => 'index')
+     
+else
+       
+@counter = Article.count +1
+      
+ @page = Page.order ('ASC Position')
+      
+ render ('new')
+    
+
+ end
+  end
+
+def articles_parameters
+   
+params.require(: articles).permit(: name,: item,: visible,: created_at, :page_id,: photo)
+
+end
+
+end
+
+
+
+
+
+

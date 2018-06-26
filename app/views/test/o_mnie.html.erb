@@ -1,0 +1,29 @@
+<h1>Test#o_mnie</h1>
+<p>app/views/test/o_mnie.html.erb</p>
+<p>Czesc!!!<p/>
+
+	<p>
+
+		<%suma=2+2 %>
+
+Suma= <%= suma%>
+<br>
+<% imie="Piotr"%>
+
+<%="Oto kilka słów o mnie."%>
+<br>
+<p>
+	<hr>
+<%=@o_mnie%>
+<hr>
+</p>
+
+<p>	
+<%=link_to("link do navigacji z hiperlaczem w RoR",{:action=>"navigacja", :id=>5, :strona=>7})%>
+</p>
+
+<hr>
+		<%=params.inspect%>
+		<hr>
+		
+		

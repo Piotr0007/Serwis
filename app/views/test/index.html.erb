@@ -1,0 +1,34 @@
+<h1>Test#index</h1>
+<p>app/views/test/index.html.erb</p>
+<p>moja strona testowa<p/>
+<p>	<%=@testowa%> <p/>
+	<p>
+<% @imiona.each do|imie|%>
+<%="#{@testowa}, Milo mi sie powitac #{imie.capitalize!}"%>
+<br>
+	<% end %>
+	<p/>
+
+	<p>
+
+	<%=link_to("link do navigacji z hiperlaczem w RoR",{:action=>"navigacja", :id=>5, :strona=>7})%>
+
+
+
+
+
+<p>
+
+		Parametr ID= <%=@id +30    %>
+</p>
+
+	<p>
+
+			 strona= <%= params[:strona]%>
+
+
+		</p>
+
+<hr>
+		<%=params.inspect%>
+		<hr>

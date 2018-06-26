@@ -1,0 +1,37 @@
+<h1>Test#witaj</h1>
+<p>app/views/test/witaj.html.erb</p>
+<p>Witam!!!<p/>
+
+	<p>
+
+		<%suma=2+2 %>
+
+Suma= <%= suma%>
+<br>
+<% imie="Piotr"%>
+<%="Czesc, mam na imie #{imie}"%>
+	<p>
+
+		<p>
+
+			<%=link_to("link do navigacji z hiper w RoR", {:action=>"navigacja", :id=>6, :strona=>6})%>
+
+
+		</p>
+
+		<p>
+
+		<%="Parametr id="+params[:id]      %>
+		</p>
+
+		
+		<p>
+
+			 strona= <%= params[:strona]%>
+
+
+		</p>
+
+		<hr>
+		<%=params.inspect%>
+		<hr>

@@ -1,0 +1,41 @@
+
+
+<p>
+<%= link_to("link do strony witaj z RoR", {:action=>"witaj",:id=>2,:strona=>2})%>
+</p>
+<p>
+<%=link_to("link do strony test z hiper RoR", {:action=>"test", :id=>3,:strona=>3})%>
+
+
+</p>
+<p>
+<%=link_to("link do strony test z hiper RoR", {:action=>"index", :id=>4,:strona=>4})%>
+
+
+</p>
+<p>
+<%=link_to("link do strony o mnie z hiper RoR", {:action=>"o_mnie", :id=>5,:strona=>5})%>
+
+
+</p>
+<p>
+<%=link_to("link do navigacji z hiper RoR", {:action=>"navigacja", :id=>6,:strona=>6})%>
+
+
+</p>
+
+	<p>
+
+		<%="Parametr id="+params[:id]      %>
+		</p>
+
+		
+		<p>
+
+			 strona= <%= params[:strona]%>
+
+
+		</p>
+		<hr>
+		<%=params.inspect%>
+		<hr>

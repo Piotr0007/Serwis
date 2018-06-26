@@ -1,0 +1,44 @@
+<%= blad(@artykuly) %>
+
+<%= form_for(:artykuly, :url=>{:action=>action_name}) do |pole| %>
+  <table class="table table-striper">
+    <tr>
+      <th><%= pole.label(:strona_id, "Strona") %></th>
+      <td><%= pole.select(:strona_id, @strona.map{|t| [t.nazwa, t.id]}, :class=>'form-control') %></td>
+    </tr>
+
+    <tr>
+      <th><%= pole.label(:nazwa) %></th>
+      <td><%= pole.text_field(:nazwa, :class=>'form-control') %></td>
+    </tr>
+
+    <tr>
+      <th><%= pole.label(:pozycja) %></th>
+      <td><%= pole.select(:pozycja, 1..@licznik, :class=>'form-control') %></td>
+    </tr>
+
+    <tr>
+      <th><%= pole.label(:widoczny, "Czy jest widoczny?") %></th>
+      <td><%= pole.check_box(:widoczny) %></td>
+    </tr>
+
+    <tr>
+      <th><%= pole.label(:zalacznik, "Zdjęcie") %></th>
+      <td><%= pole.file_field(:zalacznik) %></td>
+    </tr>
+
+    <tr>
+      <th><%= pole.label(:created_at, "Utworzony") %></th>
+      <td><%= pole.datetime_select(:created_at, :class=>'form-control') %></td>
+    </tr>
+  </table>
+
+  <div style="text-align: center;">
+    <%= link_to("Powrót", {:action=>'index'},:class=>'btn btn-warning') %>
+    <%= pole.submit(action_name == 'utworz' ? "Utwórz" : "Zapisz", :class=>'btn btn-primary')  %>
+  </div>
+<% end %>
+
+
+
+ 
